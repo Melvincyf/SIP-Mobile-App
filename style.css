@@ -20,6 +20,7 @@ body {
   font-family: "Manrope", "Segoe UI", sans-serif;
   color: var(--ink);
   min-height: 100vh;
+  min-height: 100svh;
   background: radial-gradient(circle at 10% 10%, #f8fbf6 0, #f0f6ef 45%, #ecefe6 100%);
   display: flex;
   justify-content: center;
@@ -65,6 +66,7 @@ body::after {
   box-shadow: var(--shadow);
   overflow: hidden;
   min-height: min(880px, 92vh);
+  min-height: min(880px, 92svh);
   display: flex;
   flex-direction: column;
   animation: rise 0.8s ease forwards;
@@ -199,6 +201,7 @@ body::after {
   padding: 8px 20px 20px;
   display: grid;
   gap: 18px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .panel {
@@ -443,5 +446,60 @@ body::after {
   .app {
     border-radius: 0;
     min-height: 100vh;
+    min-height: 100svh;
+  }
+}
+
+@media (max-width: 420px) {
+  .status-bar {
+    padding: 12px 16px 4px;
+  }
+
+  .app-header {
+    padding: 10px 16px 6px;
+  }
+
+  .search,
+  .tabs {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .screen {
+    padding: 6px 16px 16px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+  }
+
+  .tab {
+    font-size: 0.78rem;
+    padding: 8px 6px;
+  }
+
+  .feed-card,
+  .chat-wrap {
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .tab {
+    text-align: left;
+  }
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .bottom-nav {
+    padding-bottom: calc(18px + env(safe-area-inset-bottom));
+  }
+
+  .status-bar {
+    padding-top: calc(16px + env(safe-area-inset-top));
   }
 }
