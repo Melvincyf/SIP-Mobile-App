@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Support Circle - Mobile Web Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <div class="app" role="application" aria-label="Support Circle app prototype">
+        <div class="status-bar">
+          <span>9:41</span>
+          <div class="status-icons">
+            <div class="status-pill"></div>
+            <div class="status-dot"></div>
+          </div>
+        </div>
+
+        <header class="app-header">
+          <div class="brand">Support Circle</div>
+          <div class="header-actions">
+            <img
+              class="profile-photo"
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23cfe2d0'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+              alt="Profile photo"
+            />
+            <button class="icon-button" aria-label="Menu">
+              <span class="icon-dot"></span>
+            </button>
+          </div>
+        </header>
+
+        <div class="search">
+          <span class="dot"></span>
+          Search groups, topics, or parents
+        </div>
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" role="tab" aria-selected="true" data-view="feed" id="feed">
+            Feed
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-view="groups" id="groups">
+            Groups
+          </button>
+          <button class="tab" role="tab" aria-selected="false" data-view="chat" id="chat">
+            Live Chat
+          </button>
+        </div>
+
+        <div class="screen">
+          <section class="panel active" data-view="feed" aria-labelledby="feed">
+            <div class="chips">
+              <span class="chip">Single parents</span>
+              <span class="chip">Shift workers</span>
+              <span class="chip">Self care</span>
+            </div>
+
+            <article class="feed-card">
+              <div class="feed-meta">
+                <img
+                  class="avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23cfe2d0'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+                  alt="User avatar"
+                />
+                Anonymous parent - 2 mins ago
+              </div>
+              <h4>How do you manage night shifts and school mornings?</h4>
+              <p>
+                I am struggling to keep routines. Looking for gentle tips that actually work.
+              </p>
+              <div class="actions">
+                <button class="action-btn">Support</button>
+                <button class="action-btn secondary">Reply</button>
+              </div>
+            </article>
+
+            <article class="feed-card">
+              <div class="feed-meta">
+                <img
+                  class="avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23dbe8dc'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+                  alt="Advisor avatar"
+                />
+                Verified advice - 10 mins ago
+              </div>
+              <h4>Weekend prep saved me 4 hours during the week.</h4>
+              <p>
+                We batch lunches and outfits on Sundays. It made school mornings calmer.
+              </p>
+              <div class="actions">
+                <button class="action-btn">Save</button>
+                <button class="action-btn secondary">Share</button>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel" data-view="groups" aria-labelledby="groups">
+            <div class="chips">
+              <span class="chip">Topic: Co parenting</span>
+              <span class="chip">Topic: Burnout</span>
+            </div>
+
+            <div class="group-list">
+              <div class="group-item">
+                <img
+                  class="avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23cfe2d0'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+                  alt="Group avatar"
+                />
+                <div>
+                  <div class="group-title">Coping as a Single Parent</div>
+                  <div class="group-meta">Last message: "You are not alone."</div>
+                </div>
+                <div class="badge">5</div>
+              </div>
+              <div class="group-item">
+                <img
+                  class="avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23dbe8dc'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+                  alt="Group avatar"
+                />
+                <div>
+                  <div class="group-title">Shift Work + Kids</div>
+                  <div class="group-meta">Next check in at 7:30 PM</div>
+                </div>
+                <div class="badge">2</div>
+              </div>
+              <div class="group-item">
+                <img
+                  class="avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='60' fill='%23f5e3d1'/%3E%3Ccircle cx='60' cy='48' r='22' fill='%23fdfbf6'/%3E%3Cpath d='M28 106c6-22 58-22 64 0' fill='%23fdfbf6'/%3E%3C/svg%3E"
+                  alt="Group avatar"
+                />
+                <div>
+                  <div class="group-title">Co Parenting Tips</div>
+                  <div class="group-meta">New resource shared</div>
+                </div>
+                <div class="badge">1</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel" data-view="chat" aria-labelledby="chat">
+            <div class="chat-wrap">
+              <div class="chat-header">
+                <div class="group-title">Shift Work + Kids</div>
+                <span class="chip">12 online</span>
+              </div>
+              <div class="chat-bubbles">
+                <div class="bubble left">
+                  Anyone else juggling night shifts? I feel like I am always tired.
+                </div>
+                <div class="bubble right">
+                  Same here. I started a shared calendar with my partner to plan sleep.
+                </div>
+                <div class="bubble left">
+                  That helps. I also prep backpacks the night before.
+                </div>
+              </div>
+              <div class="composer">
+                <input type="text" placeholder="Write a supportive reply..." />
+                <button class="send" aria-label="Send message">Send</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <nav class="bottom-nav">
+          <div class="nav-item active">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 10.5L12 3l9 7.5" />
+              <path d="M5 9.5V21h14V9.5" />
+              <path d="M9 21v-6h6v6" />
+            </svg>
+            Home
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="9" cy="8" r="3" />
+              <path d="M2 21c0-4 3-6 7-6" />
+              <circle cx="17" cy="10" r="3" />
+              <path d="M12 21c0-3 2-5 6-5" />
+            </svg>
+            Groups
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 4h11a2 2 0 0 1 2 2v14H7a2 2 0 0 0-2 2V4z" />
+              <path d="M7 4v16" />
+            </svg>
+            Resources
+          </div>
+          <div class="nav-item">
+            <svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="8" r="3.5" />
+              <path d="M4 21c0-4.5 3.6-7 8-7s8 2.5 8 7" />
+            </svg>
+            Profile
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const panels = document.querySelectorAll(".panel");
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", () => {
+          const view = tab.dataset.view;
+          tabs.forEach((btn) => {
+            btn.classList.toggle("active", btn === tab);
+            btn.setAttribute("aria-selected", btn === tab ? "true" : "false");
+          });
+          panels.forEach((panel) => {
+            panel.classList.toggle("active", panel.dataset.view === view);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
